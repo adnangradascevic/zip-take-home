@@ -11,6 +11,7 @@ import { formatUsd } from "./utils/formatUsd.js";
 export default function App() {
   const [qty, setQty] = useState(1);
   const unitPrice = 49;
+  const unusedVariable = 123
 
   const subtotal = useMemo(() => qty * unitPrice, [qty]);
 
