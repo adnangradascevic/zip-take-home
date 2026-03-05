@@ -1,9 +1,10 @@
 # Zip QA CI Take-Home (Frontend Sample)
 
 This repo is a minimal **frontend app** (Vite + React) that demonstrates:
+
 - **1 linter**: ESLint
 - **1 set of unit tests**: Vitest + Testing Library
-- A **CI pipeline** that runs on every PR to `master` and on pushes to `master` (GitHub Actions)
+- A **CI pipeline** that runs on every PR to `main` and on pushes to `main` (GitHub Actions)
 
 ## Local setup
 
@@ -21,10 +22,12 @@ Open: http://localhost:5173
 Workflow: `.github/workflows/ci.yml`
 
 Triggers:
-- `pull_request` targeting `master`
-- `push` to `master`
+
+- `pull_request` targeting `main`
+- `push` to `main`
 
 Checks:
+
 - `npm ci`
 - `npm run lint`
 - `npm test`
@@ -35,9 +38,10 @@ Checks:
 
 Go to:
 **Settings → Branches → Add branch protection rule**  
-Branch: `master`
+Branch: `main`
 
 Enable:
+
 - **Require a pull request before merging**
 - **Require approvals** → set to **1**
 - **Require status checks to pass before merging**
@@ -53,6 +57,7 @@ Go to:
 **Settings → General → Pull Requests**
 
 Set merge methods:
+
 - ✅ Allow **Squash merging**
 - ✅ Allow **Rebase merging**
 - ❌ Disable **Merge commits**
@@ -60,10 +65,9 @@ Set merge methods:
 ## Deliverables checklist
 
 - [ ] Push this repo to GitHub
-- [ ] Verify CI runs on PRs + on `master`
+- [ ] Verify CI runs on PRs + on `main`
 - [ ] Configure branch protection + merge method settings (above)
 - [ ] Create a PR that fails (lint/test), show it blocks merge
 - [ ] Fix it, get 1 approval, merge via squash/rebase
 - [ ] Record a Loom walkthrough
 - [ ] Export `docs/process.md` to PDF
- 
